@@ -22,13 +22,13 @@
         default: null
       }
     },
-    mounted() {
+    mounted () {
       setTimeout(() => {
         this._initScroll()
       }, 20)
     },
     methods: {
-      _initScroll() {
+      _initScroll () {
         if (!this.$refs.wrapper) {
           return
         }
@@ -37,18 +37,24 @@
           click: this.click
         })
       },
-      disable() {
+      disable () {
         this.scroll && this.scroll.disable()
       },
-      enable() {
+      enable () {
         this.scroll && this.scroll.enable()
       },
-      refresh() {
+      refresh () {
         this.scroll && this.scroll.refresh()
+      },
+      scrollTo () {
+        this.scroll && this.scroll.scrollTo.apply(this.scroll, arguments)
+      },
+      scrollToElement () {
+        this.scroll && this.scroll.scrollToElement.apply(this.scroll, arguments)
       }
     },
     watch: {
-      data() {
+      data () {
         setTimeout(() => {
           this.refresh()
         }, 20)

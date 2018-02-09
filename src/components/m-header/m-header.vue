@@ -1,7 +1,7 @@
 <template>
   <div class="m-header">
     <div class="icon"></div>
-    <h1 class="text">THEYEAR</h1>
+    <h1 class="text">THEYEAR<span>resources from qq</span></h1>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
   export default {}
 </script>
 
-<style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
+<style lang="stylus" type="text/stylus" rel="stylesheet/stylus" scoped>
 
   @import "../../common/stylus/variable"
   @import "../../common/stylus/mixin"
@@ -34,6 +34,10 @@
       vertical-align: top
       line-height: 44px
       font-size: $font-size-large
+      span
+        font-size: $font-size-small
+        color: $color-text-d
+        margin-left: 10px
     .mine
       position: absolute
       top: 0

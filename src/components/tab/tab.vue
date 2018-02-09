@@ -20,7 +20,7 @@
   export default {}
 </script>
 
-<style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
+<style lang="stylus" type="text/stylus" rel="stylesheet/stylus" scoped>
   @import "~common/stylus/variable"
   .tab
     display: flex

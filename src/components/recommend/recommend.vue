@@ -68,10 +68,11 @@
         })
       },
       loadImage () {
-        if (!this.checkLoaded) {
-          this.$refs.scroll.refresh()
-          this.checkLoaded = true
-        }
+        // let self = this
+        // if (!self.checkLoaded) {
+        //   self.$refs.scroll.refresh()
+        //   self.checkLoaded = true
+        // }
       }
     },
     components: {

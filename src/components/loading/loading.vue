@@ -17,7 +17,7 @@
 </script>
 
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
-  @import "~common/stylus/variable"
+  @import "~@/styles/variable"
 
   .loading
     width 100%

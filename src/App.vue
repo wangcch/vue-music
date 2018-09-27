@@ -9,8 +9,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import MHeader from 'components/m-header/m-header'
-  import Tab from 'components/tab/tab'
+  import MHeader from '@/components/mHeader'
+  import Tab from '@/components/tab/tab'
   export default {
     components: {
       MHeader,
@@ -20,7 +20,7 @@
 </script>
 
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
-  @import "common/stylus/index.styl"
+  @import "~@/styles/index.styl"
   #app {
   }
 </style>

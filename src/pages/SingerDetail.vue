@@ -11,7 +11,7 @@
   import { mapGetters } from 'vuex'
   import { getSingerDetail } from 'api/singer'
   import { ERR_OK } from 'api/config'
-  import { createSong } from 'common/js/song'
+  import { createSong } from '@/common/js/song'
   export default {
     data() {
       return {
@@ -54,7 +54,7 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "~common/stylus/variable"
+  @import "~@/styles/variable"
 
   .singerdetail
     position: fixed
@@ -66,7 +66,8 @@
     background: $color-background
 
   .slide-enter-active, .slide-leave-active
-    transition: all 0.3s
+    transition: all 0.3s ease
   .slide-enter, .slide-leave-to
+    opacity: 0
     transform: translate3d(100%, 0, 0)
 </style>

@@ -11,12 +11,12 @@
 
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus" scoped>
 
-  @import "../../common/stylus/variable"
-  @import "../../common/stylus/mixin"
+  @import "~@/styles/variable"
+  @import "~@/styles/mixin"
 
   .m-header
     position: relative
-    height: 44px
+    height: 45px
     text-align: center
     color: $color-text
     font-size: 0

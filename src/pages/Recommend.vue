@@ -35,9 +35,9 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Loading from 'base/loading/loading'
-  import Slider from 'base/slider/slider'
-  import Scroll from 'base/scroll/scroll'
+  import Loading from '@/components/loading/loading'
+  import Slider from '@/components/slider/slider'
+  import Scroll from '@/components/scroll/scroll'
   import { getRecommend, getDiscList } from 'api/recommend'
   import { ERR_OK } from 'api/config'
 
@@ -87,7 +87,7 @@
 </script>
 
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
-  @import "~common/stylus/variable"
+  @import "~@/styles/variable"
 
   .recommend
     position: fixed

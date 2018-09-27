@@ -21,7 +21,7 @@
 </script>
 
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus" scoped>
-  @import "~common/stylus/variable"
+  @import "~@/styles/variable"
   .tab
     display: flex
     height: 45px

@@ -4,7 +4,7 @@
       <div>
         <div v-if="recommends.length" class="slider-wrapper" ref="sliderWrapper">
           <slider>
-            <div v-for="item in recommends">
+            <div v-for="item in recommends" :key="item.id">
               <a :href="item.linkUrl">
                 <img :src="item.picUrl" @load="loadImage" class="needsclick">
               </a>
@@ -14,7 +14,7 @@
         <div class="recommend-list">
           <h1 class="list-title">热门歌单推荐</h1>
           <ul>
-            <li @click="selectItem(item)" v-for="item in discList" class="item">
+            <li @click="selectItem(item)" v-for="item in discList" class="item" :key="item.dissid">
               <div class="icon">
                 <img width="60" height="60" v-lazy="item.imgurl">
               </div>
@@ -73,6 +73,9 @@
         //   self.$refs.scroll.refresh()
         //   self.checkLoaded = true
         // }
+      },
+      selectItem (item) {
+        console.log(item)
       }
     },
     components: {

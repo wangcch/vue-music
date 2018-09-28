@@ -30,6 +30,9 @@
     .tab-item {
       flex: 1;
       text-align: center;
+      &:active {
+        background: $color-background-d;
+      }
     }
     .tab-link {
       padding-bottom: 5px;

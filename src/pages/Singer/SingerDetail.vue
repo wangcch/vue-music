@@ -1,8 +1,7 @@
 <template>
   <transition name="slide">
     <div class="singerdetail">
-      <img :src="singer.avatar" alt="">
-      <div v-html='singer.name'></div>
+      <music-list :songs="songs" :title="singer.name" :bg-image="singer.img" />
     </div>
   </transition>
 </template>
@@ -12,6 +11,7 @@
   import { getSingerDetail } from 'api/singer'
   import { ERR_OK } from 'api/config'
   import { createSong } from '@/common/js/song'
+  import MusicList from '@/components/musicList'
   export default {
     data() {
       return {
@@ -35,20 +35,23 @@
         getSingerDetail(this.singer.id).then((res) => {
           if (res.code === ERR_OK) {
             this.songs = this._normalizeSinger(res.data.list)
-            console.log(this.songs)
           }
         })
       },
       _normalizeSinger(list) {
-        let ret = []
+        let res = []
         list.forEach((item) => {
           let {musicData} = item
           if (musicData.songid && musicData.albummid) {
-            ret.push(createSong(musicData))
+            res.push(createSong(musicData))
           }
         })
-        return ret
+        return res
       }
+    },
+
+    components: {
+      MusicList
     }
   }
 </script>

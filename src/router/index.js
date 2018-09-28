@@ -4,7 +4,7 @@ import Recommend from '@/pages/Recommend'
 import Rank from '@/pages/Rank'
 import Singer from '@/pages/Singer'
 import Search from '@/pages/Search'
-import SingerDetail from '@/pages/SingerDetail'
+import SingerDetail from '@/pages/Singer/SingerDetail'
 
 Vue.use(Router)
 

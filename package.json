@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "axios": "^0.16.2",
     "babel-runtime": "^6.0.0",
     "better-scroll": "0.1.15",

@@ -56,21 +56,24 @@
   }
 </script>
 
-<style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "~@/styles/variable"
+<style scoped lang="scss">
+  @import "~@/styles/variable.scss";
 
-  .singerdetail
-    position: fixed
-    z-index: 100
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    background: $color-background
+  .singerdetail {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $color-background;
+  }
 
-  .slide-enter-active, .slide-leave-active
-    transition: all 0.3s ease
-  .slide-enter, .slide-leave-to
-    opacity: 0
-    transform: translate3d(100%, 0, 0)
+  .slide-enter-active, .slide-leave-active {
+    transition: all 0.3s ease;
+  }
+  .slide-enter, .slide-leave-to {  
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
 </style>

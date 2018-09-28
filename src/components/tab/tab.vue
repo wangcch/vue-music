@@ -20,21 +20,26 @@
   export default {}
 </script>
 
-<style lang="stylus" type="text/stylus" rel="stylesheet/stylus" scoped>
-  @import "~@/styles/variable"
-  .tab
-    display: flex
-    height: 45px
-    line-height: 45px
-    font-size: 1em
-    .tab-item
-      flex: 1
-      text-align: center
-    .tab-link
-      padding-bottom: 5px
-      color: $color-text-l
-    .router-link-active
-      .tab-link
-        color: $color-theme
-        border-bottom: 2px solid $color-theme
+<style lang="scss" scoped>
+  @import "~@/styles/variable.scss";
+  .tab {
+    display: flex;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1em;
+    .tab-item {
+      flex: 1;
+      text-align: center;
+    }
+    .tab-link {
+      padding-bottom: 5px;
+      color: $color-text-l;
+    }
+    .router-link-active {
+      .tab-link {
+        color: $color-theme;
+        border-bottom: 2px solid $color-theme;
+      }
+    }
+  }
 </style>

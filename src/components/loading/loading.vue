@@ -16,17 +16,20 @@
   }
 </script>
 
-<style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
-  @import "~@/styles/variable"
+<style lang="scss">
+  @import "~@/styles/variable.scss";
 
-  .loading
-    width 100%
-    text-align: center
-    .loading-icon
-      width: 32px
-      height: 32px
-    .desc
-      line-height: 20px
-      font-size: 0.8em
-      color: $color-text-l
+  .loading {
+    width: 100%;
+    text-align: center;
+    .loading-icon {
+      width: 32px;
+      height: 32px;
+    }
+    .desc {
+      line-height: 20px;
+      font-size: 0.8em;
+      color: $color-text-l;
+    }
+  }
 </style>

@@ -88,10 +88,11 @@
   }
 </script>
 
-<style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
-  .singer
-    position: fixed
-    top: 88px
-    bottom: 0
-    width: 100%
+<style lang="scss" scoped>
+  .singer {
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+    width: 100%;
+  }
 </style>

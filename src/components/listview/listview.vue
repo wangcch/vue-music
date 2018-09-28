@@ -178,7 +178,7 @@
         height: 30px
         line-height: 30px
         padding-left: 20px
-        font-size: $font-size-small
+        font-size: 0.8em
         color: $color-text-l
         background: $color-background-d
       .list-group-item
@@ -192,7 +192,7 @@
         .name
           margin-left: 20px
           color: $color-text-l
-          font-size: $font-size-medium
+          font-size: 1em
     .list-shortcut
       position: absolute
       z-index: 30
@@ -209,7 +209,7 @@
         padding: 3px
         line-height: 1
         color: $color-text-l
-        font-size: $font-size-small
+        font-size: 0.8em
         &.current
           color: $color-theme
     .list-fixed
@@ -221,7 +221,7 @@
         height: 30px
         line-height: 30px
         padding-left: 20px
-        font-size: $font-size-small
+        font-size: 0.8em
         color: $color-text-l
         background: $color-background-d
     .loading-container

@@ -106,7 +106,7 @@
           height: 65px
           line-height: 65px
           text-align: center
-          font-size: $font-size-medium
+          font-size: 1em
           color: $color-theme
         .item
           display: flex
@@ -124,7 +124,7 @@
             flex: 1
             line-height: 20px
             overflow: hidden
-            font-size: $font-size-medium
+            font-size: 1em
             .name
               margin-bottom: 10px
               color: $color-text

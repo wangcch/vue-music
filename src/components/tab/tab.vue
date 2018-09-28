@@ -26,7 +26,7 @@
     display: flex
     height: 45px
     line-height: 45px
-    font-size: $font-size-medium
+    font-size: 1em
     .tab-item
       flex: 1
       text-align: center

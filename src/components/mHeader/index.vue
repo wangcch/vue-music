@@ -19,7 +19,6 @@
     height: 45px
     text-align: center
     color: $color-text
-    font-size: 0
     .icon
       display: inline-block
       vertical-align: top
@@ -33,9 +32,9 @@
       display: inline-block
       vertical-align: top
       line-height: 44px
-      font-size: $font-size-large
+      font-size: 1.25em
       span
-        font-size: $font-size-small
+        font-size: 0.6em
         color: $color-text-d
         margin-left: 10px
     .mine
@@ -45,6 +44,6 @@
       .icon-mine
         display: block
         padding: 12px
-        font-size: 20px
+        font-size: 1.5em
         color: $color-theme
 </style>

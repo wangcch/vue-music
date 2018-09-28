@@ -27,6 +27,6 @@
       height: 32px
     .desc
       line-height: 20px
-      font-size: $font-size-small
+      font-size: 0.8em
       color: $color-text-l
 </style>

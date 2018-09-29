@@ -2,20 +2,22 @@
 
 > music palyer
 
-## Build Setup
+## Setup
 
 ``` bash
-# install dependencies
+git clone https://github.com/wangcch/vue-music.git
+cd vue-music
 npm install
-
-# serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# serve with hot reload at localhost:8080
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## More
+
+17年10月的学习Vue的项目，Fork: [vue-music-webapp](https://github.com/bxm0927/vue-music-webapp)
+
+现在是18年9月 🌚 ~~最近~~今年争取把坑填上吧......
+
+## License
+
+MIT

@@ -123,6 +123,7 @@
       position: relative
       overflow: hidden
       white-space: nowrap
+      background: $color-background-d
       .slider-item
         float: left
         box-sizing: border-box

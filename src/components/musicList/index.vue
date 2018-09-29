@@ -1,23 +1,35 @@
 <template>
   <div class="music-list">
-    <div class="list-top">
+    <div class="list-top" :style="topBgStyle(scrollY)">
       <div class="btn-back" @click="toBack">
         <i class="fas fa-chevron-left" />
       </div>
       <p>{{title}}</p>
     </div>
-    <div class="bg-img" :style="`background-image: url(${bgImage})`">
-    </div>
-    {{songs.length}}
-    <div class="loading-container" v-show="!songs.length">
-      <loading></loading>
-    </div>
+    <div class="bg-img" :style="`background-image: url(${bgImage}); height: ${300 + scrollY}px;`"></div>
+    <scroll class="listview"
+      @scroll="scroll"
+      ref="scrollRef"
+      :data="songs"
+      :probe-type="probeType"
+      :listen-scroll="listenScroll">
+      <div class="list-box">
+        <div v-for="(item, index) in songs" :key="item.id" class="list-item" style="padding: 20px 0;">
+          <p>{{ index + 1 }}{{ item.name }}</p>
+          <small>{{ `${item.singer}-${item.album}` }}</small>
+        </div>
+      </div>
+      <div class="loading-container" v-show="!songs.length">
+        <loading></loading>
+      </div>
+    </scroll>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   // import { mapActions } from 'vuex'
   import Loading from '@/components/loading/loading'
+  import Scroll from '@/components/scroll/scroll'
   export default {
     props: {
       songs: {
@@ -33,21 +45,37 @@
     },
     data() {
       return {
+        scrollY: 0
       }
     },
     computed: {
     },
     methods: {
-      toBack () {
+      toBack() {
         this.$router.back()
+      },
+
+      scroll(pos) {
+        this.scrollY = pos.y
+        console.log(this.scrollY)
+      },
+
+      topBgStyle(scrollY) {
+        const bufferDistance = 300 - 45
+        const bgTransparency = (Math.abs(scrollY) - bufferDistance) * 3 / 300
+        return `background: rgba(255,255,255, ${bgTransparency});
+          color: ${scrollY > -bufferDistance ? '#fff' : 'rgba(0,0,0,' + bgTransparency + ')'}`
       }
     },
 
     components: {
-      Loading
+      Loading,
+      Scroll
     },
 
     created() {
+      this.probeType = 3
+      this.listenScroll = true
     }
   }
 </script>
@@ -80,9 +108,25 @@
       }
     }
     .bg-img {
-      padding-top: 70%;
+      height: 300px;
       background-size: cover;
+      background-position: center;
       filter: brightness(60%);
+    }
+    .listview {
+      position: fixed;
+      width: 100%;
+      height: calc(100% - 300px);
+      box-sizing: border-box;
+      top: 0;
+      margin-top: 300px;
+      .list-box {
+        padding: 0 30px;
+        background: $color-background;
+        .list-item:active {
+          background: #000;
+        }
+      }
     }
     .loading-container {
       position: absolute;
